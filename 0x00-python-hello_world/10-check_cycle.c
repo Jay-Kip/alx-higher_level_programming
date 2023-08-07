@@ -13,17 +13,17 @@ int check_cycle(listint_t *list)
 	listint_t *see;
 
 	if (list == NULL || list->next == NULL)
-		return (1);
+		return (0);
 
 	now = list;
 	see = now->next;
 
-	while (see != NULL && see->next != NULL && see->next->next != NULL)
+	while (now != NULL && see->next != NULL && see->next->next != NULL)
 	{
 		if (now == see)
 			return (1);
 		now = now->next;
-		now->next = now->next->next;
+		see = see->next->next;
 	}
 	return (0);
 }
