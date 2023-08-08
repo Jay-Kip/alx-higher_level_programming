@@ -1,4 +1,8 @@
 #!/usr/bin/python3
-import dis
+
 def magic_calculation(a, b, c):
-    dis.dis(magic_calculation)
+    if a < b:
+        return c
+    if b > c:
+        return a + b
+    return a * b - c
