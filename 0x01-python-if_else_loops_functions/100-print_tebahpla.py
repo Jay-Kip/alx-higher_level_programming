@@ -1,14 +1,7 @@
 #!/usr/bin/python3
 
-for i in range(65, 122):
-    if i >= 97 and i <= 122:
-        i = i - 32
-        i = chr(i)
-        print(i, end=", ")
-    elif i >= 65 and i <=96:
-        i = i + 32
-        i = chr(i)
-        print(i, end=", ")
-    else:
-        prin("")
+counter = 0
 
+for i in range(ord('z'), ord('a') - 1, -1):
+    print("{}".format(chr(i - counter)), end="")
+    counter = 32 if counter == 0 else 0
