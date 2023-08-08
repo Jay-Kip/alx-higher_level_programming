@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "lists.h"
 #include <stdlib.h>
+/**
+ * insert_node - function to insert a node
+ * @head: node
+ * @number: number to be inserted
+ * Return: inserted number
+ */
 
 listint_t *insert_node(listint_t **head, int number)
 {
