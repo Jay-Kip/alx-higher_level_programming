@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-import sys
-add = __import__('add_0').add
+if __name__ == "__main__":
+    from add_0 import add
+    a = 1
+    b = 2
 
-a = int(sys.argv[1])
-b = int(sys.argv[2])
-
-print(add(a, b))
+    print("{} + {} = {}".format(a, b, add(a, b)))
