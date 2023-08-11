@@ -23,6 +23,3 @@ if __name__ == "__main__":
     elif op == '*':
         print(op)
         print("{} {} {} = {}".format(a, op, b, div(a, b)))
-
-'''    if args != 3:
-        print("Usage: {} {} {} {}".format(args[0], args[1], args[2], args[3])) '''
