@@ -5,7 +5,6 @@ if __name__ == "__main__":
 
     args = sys.argv[1:]
     length = len(args)
-    
     if length == 0:
         print("0 arguements.")
 
