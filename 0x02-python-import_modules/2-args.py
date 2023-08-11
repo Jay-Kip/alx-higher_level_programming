@@ -6,12 +6,12 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     length = len(args)
     if length == 0:
-        print("0 arguements.")
+        print("0 arguments:.")
 
     elif length == 1:
-        print("1 arguement:")
+        print("1 argument:")
     else:
-        print("{} arguements:".format(length))
+        print("{} argument::".format(length))
 
     for i in range(length):
         print("{}: {}".format(i + 1, args[i]))
