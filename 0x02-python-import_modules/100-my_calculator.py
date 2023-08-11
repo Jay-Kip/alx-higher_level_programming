@@ -15,18 +15,14 @@ if __name__ == "__main__":
         print("{} {} {} = {}".format(a, op, b, add(a, b)))
 
     elif op == '-':
-        print(op)
         print("{} {} {} = {}".format(a, op, b, sub(a, b)))
-
+   
     elif op == '*':
-        print(op)
         print("{} {} {} = {}".format(a, op, b, mul(a, b)))
 
     elif op == '/':
-        print(op)
         print("{} {} {} = {}".format(a, op, b, div(a, b)))
 
-    elif op != '+' or op != '-' or op != '*' or op != '/':
-        print(op)
+    else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
