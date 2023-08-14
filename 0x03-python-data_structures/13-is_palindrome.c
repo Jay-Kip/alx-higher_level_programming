@@ -34,6 +34,9 @@ int is_palindrome(listint_t **head)
 	listint_t *middle;
 	size_t size = 0, i;
 
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
+
 	temporary = *head;
 	while (temporary)
 	{
@@ -44,8 +47,11 @@ int is_palindrome(listint_t **head)
 	temporary = *head;
 	for (i = 0; i < (size / 2) - 1; i++)
 	{
-		return (0);
+		temporary = temporary->next;
 	}
+
+	if ((size % 2 == 0 && temporary->n != temporary->next->n))
+			return (0);
 
 	temporary = temporary->next->next;
 	reverse = reverse_listint(&temporary);
