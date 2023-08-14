@@ -8,7 +8,7 @@ void print_python_list_info(PyObject *p)
 	s = Py_SIZE(p);
 	a = ((PyListObject *)p)->allocated;
 
-	printf("[*] Size of Python List = %d\n", s);
+	printf("[*] Size of the Python List = %d\n", s);
 	printf("[*] Allocated = %d\n", a);
 
 	for (i = 0; i < s; i++)
