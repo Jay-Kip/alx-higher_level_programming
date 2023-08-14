@@ -2,4 +2,4 @@
 
 def multiple_returns(sentence):
     for char in sentence:
-        return len(sentence), char
+        return ((len(sentence)), char)
