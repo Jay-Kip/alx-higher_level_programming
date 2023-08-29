@@ -1,5 +1,6 @@
 #!/usr/bin.python3
 
+
 '''Class Aquare that defines a square by: (based on 1-square.py)'''
 
 
