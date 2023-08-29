@@ -7,8 +7,7 @@
 class Square:
     def __init__(self, size=0):
 
-        '''Isinstance is a bulit-in Python function'''
-        '''Here it checks if size is int'''
+        '''Isinstance Here  checks if size is int'''
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
