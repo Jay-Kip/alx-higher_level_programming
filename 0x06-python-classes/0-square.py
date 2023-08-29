@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 
 class Square:
-    pass  # This line does nothing. A class needs atleast one line
+    '''This creates a line that does nothing'''
+    pass
