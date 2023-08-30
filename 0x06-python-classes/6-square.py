@@ -4,7 +4,7 @@
 
 
 class Square:
-    '''A square'''
+    '''A new square'''
     def __init__(self, size=0, position=(0, 0)):
         '''init a new saquare'''
         self.__size = size
@@ -29,7 +29,9 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(num, int) and num >= 0 for num in value):
+        if not isinstance(value, tuple) or
+        len(value) != 2 or
+        not all(isinstance(num, int) and num >= 0 for num in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
