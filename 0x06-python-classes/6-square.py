@@ -7,8 +7,8 @@ class Square:
     '''A new square'''
     def __init__(self, size=0, position=(0, 0)):
         '''init a new saquare'''
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
