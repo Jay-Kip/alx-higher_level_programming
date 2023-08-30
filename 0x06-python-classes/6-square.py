@@ -38,11 +38,11 @@ class Square:
 
     def area(self):
         '''Returns area of the saquare'''
-        return self.__size ** 2
+        return (self.__size * self.__size)
 
     def my_print(self):
         if self.__size == 0:
-            print()
+            print("")
             return
 
         [print("") for i in range(0, self.__position[1])]
