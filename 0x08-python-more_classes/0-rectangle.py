@@ -2,6 +2,8 @@
 '''
 Declaring a class Rectange
 '''
+
+
 class Rectangle:
     '''Class'''
     pass
