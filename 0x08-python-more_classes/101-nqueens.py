@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import sys
 
+
 def solve_nqueens(n):
     if n < 4:
         print("N must be at least 4")
@@ -13,9 +14,10 @@ def solve_nqueens(n):
     for solution in solutions:
         print_solution(solution)
 
+
 def solve_nqueens_util(n, row, board, solutions):
     if row == n:
-        solutions.append(board[:])
+        solutions.append([[i, board[i]] for i in range(n)])
     else:
         for col in range(n):
             if is_safe(row, col, board):
@@ -23,14 +25,17 @@ def solve_nqueens_util(n, row, board, solutions):
                 solve_nqueens_util(n, row + 1, board, solutions)
                 board[row] = -1
 
+
 def is_safe(row, col, board):
     for i in range(row):
         if board[i] == col or board[i] - i == col - row or board[i] + i == col + row:
             return False
         return True
 
+
 def print_solution(board):
-    n = len(board)
+    print(board)
+    '''n = len(board)
     for row in range(n):
         line = ""
         for col in range(n):
@@ -39,7 +44,8 @@ def print_solution(board):
             else:
                 line += ". "
         print(line)
-    print()
+    print()'''
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -49,7 +55,7 @@ if __name__ == "__main__":
 
     try:
         n = int(sys.argv[1])
-    except:
+    except ValueError:
         print("N must be a number")
         sys.exit(1)
 
