@@ -1,8 +1,11 @@
-Numbers
+Positive Integer Numbers
+=====
 ::
 	>>> add_integer = __import__('0-add_integer').add_integer
 	>>> add_integer(2, 2)
 	4
+
+Negative and positive numbers
 
 ::
 	>>> add_integer(-2, 2)
@@ -12,22 +15,92 @@ Numbers
 	>>> add_integer(-2, -2)
 	-4
 
+Float and an integer
+
 ::
 	>>> add_integer(2.0, 3)
-	5.0
+	5
+
+Adding zero
 
 ::
-	>>> add_integer(0, 0)
-	0
+	>>> add_integer(2, 0)
+	2
 
 ::
-	>>> add_integer(10, 5)
-	15
+	>>> add_integer(1000000, 2000000)
+	3000000
+
+
+With Floats
 
 ::
-	>>> add_integer(20, -5)
-	15
+	>>> add_integer(2.0, 3.1)
+	5
+
+Large Numbers
 
 ::
-	>>> add_integer(50, 5)
-	55
+	>>> add_integer(2147483647, 1)
+	2147483648
+
+Floats casted into integers before addition
+
+::
+	>>> add_integer(5.9, 0.3)
+	5
+
+Second parameter is Optional
+
+::
+	>>> add_integer(1)
+	99
+
+None Numbers
+
+::
+	>>> add_integer("world", 10)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Still none Numbers
+
+::
+	>>> add_integer(7, "world")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+Both be strings
+
+::
+	>>> add_integer("Julien", "Barbier")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+if None is provided
+
+::
+	>>> add_integer(5, None)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+With NaN
+
+::
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+With infinity
+
+::
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+With NaN as second param
+
+::
+	>>> add_integer(4, float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
