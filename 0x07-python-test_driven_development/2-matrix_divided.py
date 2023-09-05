@@ -6,8 +6,9 @@ def matrix_divided(matrix, div):
 
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
-    if type(matrix) not in [list]:
+    if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+
 
     rows = len(matrix)
     cols = len(matrix[0])
