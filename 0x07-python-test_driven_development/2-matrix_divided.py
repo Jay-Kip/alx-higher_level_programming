@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 
 def matrix_divided(matrix, div):
+    '''rows = len(matrix)
+    cols = len(matrix[0])'''
+
+    if type(div) not in [int, float]:
+        raise TypeError("div must be a number")
+    if type(matrix) not in [list]:
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+
     rows = len(matrix)
     cols = len(matrix[0])
 
