@@ -9,7 +9,6 @@ def text_indentation(text):
 
     for char in text:
         result += char
-
         if char in special_chars:
             result += "\n\n"
 

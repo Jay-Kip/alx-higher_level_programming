@@ -1,0 +1,24 @@
+
+	 >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Period
+
+::
+	>>> text_indentation("Julien.")
+	Julien.
+
+Question mark
+
+::
+	>>> text_indentation(" Hello world?")
+	Hello world?
+
+::
+	>>> text_indentation("Comin up is a new line:\nNew Line.")
+	Comin up is a new line:
+	<BLANKLINE>
+	<BLANKLINE>
+	New Line.
+
+	>>> text_indentation("\n\n\n Welcome to the Universe.")
+	Welcome to the Universe.
