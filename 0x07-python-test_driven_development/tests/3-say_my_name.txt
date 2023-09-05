@@ -1,5 +1,44 @@
-Names
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Correct Input
+
 ::
-	say_my_name = __import__('3-say_my_name').say_my_name
-	>>> say_my_name("Jay", "Kip")
-	Jay Kip
+	>>> say_my_name("Julien", "Beiber")
+	My name is Julien Beiber
+
+
+Double names
+
+::
+	>>> say_my_name("Jayden Smith", "Rowe Ronald")
+	My name is Jayden Smith Rowe Ronald
+
+Invalid First name
+
+::
+	>>> say_my_name(33, "Mike")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+Invalid Last name
+
+::
+
+	>>> say_my_name("Jack", 67)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+Nothing passed
+
+::
+	say_my_name(None)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+Nothing provided
+
+::
+	>>> say_my_name()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
