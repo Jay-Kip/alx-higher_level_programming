@@ -47,12 +47,15 @@ class Rectangle:
         return self.__height * self.__width
 
     def perimeter(self):
-        '''Return printable representation of the Rectangle'''
-        if self.__width == o or self.__height == 0:
+        '''Return perimeter of the Rectangle'''
+        return (self.__height + self.__width) * 2
+
+    def __str__(self):
+        if self.__width == 0 or self.__height == 0:
             return ""
         rectangle_str = []
         for i in range(self.__height):
-            [rectangle_str.append("#") for k in range(self.__width)]
+            [rectangle_str.append(str(self.print_symbol)) for k in range(self.__width)]
             if i != self.__height - 1:
                 rectangle_str.append("\n")
                 return ("".join(rectangle_str))
