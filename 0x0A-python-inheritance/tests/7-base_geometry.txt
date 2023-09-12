@@ -70,3 +70,15 @@ case 12: passing a dictionary
 	>>> bg.integer_validator("age", {1, 2})
 	Traceback (most recent call last):
 	TypeError: age must be an integer
+
+case 13: passing none
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", None)
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+case 14: Passing a tuple
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", (1,))
+	Traceback (most recent call last):
+	TypeError: age must be an integer
