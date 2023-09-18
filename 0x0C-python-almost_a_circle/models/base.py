@@ -4,9 +4,12 @@ import json
 
 
 class Base:
+
     '''Defines a class base'''
     __nb_objects = 0
+
     def __init__(self, id=None):
+
         '''Initializes a new instance of class base'''
         if id is not None:
             self.id = id
@@ -27,10 +30,10 @@ class Base:
             list_objs = []
 
         filename = cls.__name__ + ".json"
-        json_string = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
+        json_str = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
 
         with open(filename, "w") as file:
-            file.write(json_string)
+            file.write(json_str)
 
     @staticmethod
     def from_json_string(json_string):
