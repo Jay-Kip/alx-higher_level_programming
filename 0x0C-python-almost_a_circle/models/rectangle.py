@@ -137,7 +137,7 @@ class Rectangle(Base):
         '''Returns dictionary representation of the square'''
         return {
                 "id": self.id,
-                "size": self.height,
+                "size": self.width,
                 "x": self.x,
                 "y": self.y
                 }
