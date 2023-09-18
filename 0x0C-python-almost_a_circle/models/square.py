@@ -21,7 +21,8 @@ class Square(Rectangle):
 
     def __str__(self):
         '''Returns a string representation'''
-        return "[square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return ("[square] ({}) {}/{} - {}"
+                .format(self.id, self.x, self.y, self.width))
 
     def update(self, *args, **kwargs):
         '''Updates the square'''
@@ -43,7 +44,7 @@ class Square(Rectangle):
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":
-                    if v == None:
+                    if v is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = v
@@ -54,7 +55,6 @@ class Square(Rectangle):
                 elif k == "y":
                     self.y = v
 
-
     def to_dictionary(self):
         '''Returns dictionary representation of a square'''
         return {
@@ -63,4 +63,3 @@ class Square(Rectangle):
                 "x": self.x,
                 "y": self.y
                 }
-
