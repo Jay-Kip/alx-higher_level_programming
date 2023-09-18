@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Defines class base'''
 import json
+import csv
 
 
 class Base:
@@ -69,4 +70,44 @@ class Base:
                 lst_dicts = Base.from_json_string(f.read())
                 return [cls.create(**d) for d in lst_dicts]
         except IOError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        '''Serializes a list of objects into a CSV file'''
+        filename = cls.__name__ + ".csv"
+
+        with open(filename, "w", newline="") as f:
+            writer = csv.writer(f)
+
+            for obj in list_objs:
+                if cls.__name__ == "Rectangle":
+                    row = [obj.id, obj.width, obj.height, obj.x, obj.y]
+                elif cls.__name__ == "Square":
+                    row = [obj.id, obj.size, obj.x, obj.y]
+                else:
+                    raise ValueError("Invalid class type")
+
+                writer.writerow(row)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        '''Serializes a list of objects to a file'''
+        filename = cls.__name__ + ".csv"
+
+        try:
+            with open(filename, "r", newline="") as file:
+                reader = csv.reader(file)
+                instances = []
+
+                for row in reader:
+                    if cls.__name__ == "Rectangle":
+                        instance = cls(*map(int, row))
+                    elif cls.__name__ == "Square":
+                        instance = cls(*map(int, row))
+                    else:
+                        raise ValueError("Invalid class type")
+
+                    instances.append(instances)
+        except FileNotFoundError:
             return []
