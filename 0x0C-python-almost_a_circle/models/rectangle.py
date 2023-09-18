@@ -82,8 +82,8 @@ class Rectangle(Base):
 
     def __str__(self):
         '''Returns [Rectangle] (<id>) <x>/<y> - <width>/<height>'''
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
-
+        return ("[Rectangle] ({}) {}/{} - {}/{}"
+                .format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
         '''Updates the class rectangle
@@ -98,7 +98,7 @@ class Rectangle(Base):
         **kwargs (dict) : New key/value pairs of attributes
         '''
         if args and len(args) != 0:
-            a = 0;
+            a = 0
             for arg in args:
                 if a == 0:
                     if arg is None:
@@ -131,7 +131,6 @@ class Rectangle(Base):
                     self.x = v
                 elif k == "y":
                     self.y = v
-
 
     def to_dictionary(self):
         '''Returns dictionary representation of the Rectangle'''
