@@ -134,6 +134,7 @@ class Rectangle(Base):
 
 
     def to_dictionary(self):
+        '''Returns dictionary representation of the square'''
         return {
                 "id": self.id,
                 "size": self.height,
