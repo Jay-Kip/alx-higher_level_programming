@@ -133,10 +133,10 @@ class Rectangle(Base):
                     self.y = v
 
 
-    '''def to_dictionary(self):
+    def to_dictionary(self):
         return {
-                "id": self.id
-                "size": self.size
-                "x": self.x
+                "id": self.id,
+                "size": self.height,
+                "x": self.x,
                 "y": self.y
-                }'''
+                }
