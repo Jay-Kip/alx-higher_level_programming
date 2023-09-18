@@ -38,3 +38,17 @@ class Base:
             return []
 
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''Returns a class created from a dictionary of attributes
+        Args:
+        **dictionary (dict): key/value pairs of attributes
+        '''
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new_dict = cls(1, 1)
+            else:
+                new_dict = cls(1)
+            new_dict.update(**dictionary)
+            return new_dict
