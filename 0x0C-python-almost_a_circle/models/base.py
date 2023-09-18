@@ -31,3 +31,7 @@ class Base:
 
         with open(filename, "w") as file:
             file.write(json_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        return json.dumps(json_string)
