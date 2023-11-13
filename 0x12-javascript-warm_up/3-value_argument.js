@@ -1,6 +1,5 @@
 #!/usr/bin/node
-const [_, __, arg] = process.argv; /* The underscores indicate the vars are ignored knowingly */
-
+const [_, __, arg] = process.argv;
 if (!arg) {
   console.log('No argument');
 } else {
