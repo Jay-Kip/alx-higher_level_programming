@@ -16,7 +16,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     '''Excecute SQL commands'''
-    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY {}"
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
                    .format(sys.argv[4]))
 
     '''Fetch all the rows returned by the query'''
