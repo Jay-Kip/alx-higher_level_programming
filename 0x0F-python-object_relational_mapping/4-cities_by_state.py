@@ -15,7 +15,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     '''Excecute SQL statements'''
-    cursor.execute("""SELECT * FROM cities ORDER BY cities.id ASC""")
+    cursor.execute("""SELECT cities.id, cities.name , states.name FROM
+                   cities INNER JOIN states ON states.id=cities.state_id""")
 
     '''Fetch all rows returned by the query'''
     rows = cursor.fetchall()
