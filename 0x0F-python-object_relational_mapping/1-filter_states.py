@@ -17,7 +17,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     '''execute SQL query'''
     cursor.execute("""SELECT * FROM states
-                   WHERE name LIKE 'N%'
+                   WHERE name LIKE BINARY 'N%'
                    OREDER BY states.id""")
 
     '''Fetching all the rows returned by the query'''
