@@ -28,8 +28,8 @@ if __name__ == "__main__":
     '''Fetch all the rows returned by the query'''
     rows = cursor.fetchall()
 
-    for row in rows:
-        print(row)
+    temp = list(row[0] for row in rows)
+    print(*temp, sep=", ")
 
     cursor.close()
     db.close()
