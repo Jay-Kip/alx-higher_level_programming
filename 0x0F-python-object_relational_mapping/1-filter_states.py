@@ -16,7 +16,9 @@ if __name__ == "__main__":
     '''Create cursor'''
     cursor = db.cursor()
     '''execute SQL query'''
-    cursor.execute("""SELECT * FROM states WHERE name LIKE 'N%' OREDER BY states.id""")
+    cursor.execute("""SELECT * FROM states
+                   WHERE name LIKE 'N%'
+                   OREDER BY states.id""")
 
     '''Fetching all the rows returned by the query'''
     rows = cursor.fetchall()
