@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     cursor.execute("""SELECT cities.name FROM
                 cities INNER JOIN states ON states.id=cities.state_id
-                WHERE states.name=%s""", (sys.argv[4],))
+                WHERE states.name=%s""", (sys.argv[4], ))
 
     '''Fetch all the rows returned by the query'''
     rows = cursor.fetchall()
