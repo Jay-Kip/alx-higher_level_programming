@@ -2,7 +2,7 @@
 
 '''Defines class state which inherits from Base'''
 
-from sqlalchemy import  Column, Integer, String, MetaData
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
 mt = MetaData()
