@@ -7,7 +7,7 @@ import MySQLbd
 
 if __name__ == "__main__":
     '''Establish a connection to the database'''
-    db = MyQSL.connect(host="localhost",
+    db = MyQSLdb.connect(host="localhost",
                        user=sys.argv[1],
                        passwd=sys.argv[2],
                        db=sys.argv[3],
