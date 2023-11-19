@@ -15,8 +15,9 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     '''Excecute SQL commands'''
+    search_word = sys.argv[4]
     cursor.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
-                   .format(sys.argv[4], ))
+                   .format(search_word], ))
 
     '''Fetch all the rows retured by the query'''
     rows  = cursor.fetchall()
