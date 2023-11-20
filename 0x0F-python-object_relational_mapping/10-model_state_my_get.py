@@ -20,7 +20,7 @@ if __name__ == "__main__":
     session = Session()
 
     '''Querrying the database and printing results'''
-    match = session.query(State).filter(State.name == sys.argv[4], )
+    match = session.query(State).filter(State.name == (sys.argv[4], ))
     try:
         print(match[0].id)
     except IndexError:
