@@ -19,8 +19,8 @@ if __name__ == "__main__":
     session = Session()
 
     '''Insert new state'''
-    newState = State(name='Lousiana')
+    newState = State(name='Louisiana')
     session.add(newState)
-    new_instance = session.query(State).filter_by(name='Lousiana').first()
+    new_instance = session.query(State).filter_by(name='Louisiana').first()
     print(new_instance.id)
     session.commit()
