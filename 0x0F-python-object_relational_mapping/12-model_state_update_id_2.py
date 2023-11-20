@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     '''create session'''
-    Session = sessionmaker(biind=engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
 
     '''change the name of the state object'''
