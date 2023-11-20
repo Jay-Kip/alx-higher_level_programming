@@ -2,7 +2,7 @@
 '''prints the State object with the name passed
 as argument from the database '''
 import sys
-from model_base import Base, State
+from model_state import Base, State
 from sqlachemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
