@@ -1,9 +1,11 @@
+10-model_state_my_get.py
+
 #!/usr/bin/python3
-'''adds the State object “Louisiana” to the database '''
+""" adds the state object 'Louisiana' to the database"""
 import sys
 from model_state import Base, State
-from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sqalchemy import create_engine
 
 
 if __name__ == "__main__":
@@ -11,16 +13,17 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
 
-    '''Create database tables'''
+    '''Create tables'''
     Base.metadata.create_all(engine)
 
-    '''Create session'''
+    '''Creating session'''
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    '''Insert new state'''
-    new_state = State(name='Louisiana')
-    session.add(new_state)
+    '''Creating new object state'''
+    newState = State(name='Louisiana')
+    session.add(newState)
     new_instance = session.query(State).filter_by(name='Louisiana').first()
     print(new_instance.id)
     session.commit()
+
