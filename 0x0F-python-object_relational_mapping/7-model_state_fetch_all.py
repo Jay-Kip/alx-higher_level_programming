@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """lists all State objects from the database """
 import sys
-from models_state import Base, State
+from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
 
