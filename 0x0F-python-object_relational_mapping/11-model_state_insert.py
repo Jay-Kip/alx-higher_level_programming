@@ -1,5 +1,3 @@
-10-model_state_my_get.py
-
 #!/usr/bin/python3
 """ adds the state object 'Louisiana' to the database"""
 import sys
@@ -26,4 +24,3 @@ if __name__ == "__main__":
     new_instance = session.query(State).filter_by(name='Louisiana').first()
     print(new_instance.id)
     session.commit()
-
