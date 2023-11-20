@@ -20,5 +20,5 @@ if __name__ == "__main__":
 
     '''change the name of the state object'''
     new = session.query(State).filter_by(id=2).first()
-    new.name = 'New Mexic'
+    new.name = 'New Mexico'
     session.commit()
