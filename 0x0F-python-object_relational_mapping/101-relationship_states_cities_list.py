@@ -21,5 +21,5 @@ if __name__ == "__main__":
     for i in session.query(State).order_by(State.id):
         print(i.id, i.name, sep=": ")
         for c in i.cities:
-            print("    ", end=" ")
+            print("    ", end="")
             print(c.id, c.name, sep=": ")
