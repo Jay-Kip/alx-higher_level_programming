@@ -1,3 +1,3 @@
 #!/bin/bash
 # Displays HTTP method the server will accept
-curl -sX -i "$1"
+curl -sX OPTIONS -i "$1"
