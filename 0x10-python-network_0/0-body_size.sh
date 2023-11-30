@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # Displays size of the body of response
 
 # path=$1
