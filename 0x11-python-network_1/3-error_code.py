@@ -15,7 +15,7 @@ def main():
             html =resp.read()
             print(html)
 
-        except urllib.error.HTTPError as e:
+    except urllib.error.HTTPError as e:
             print(f"HTTP Error: {e.code} {e.reason}")
             # Handle the HTTP error as needed
 
