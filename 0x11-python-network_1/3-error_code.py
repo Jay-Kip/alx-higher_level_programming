@@ -18,3 +18,6 @@ def main():
         except urllib.error.HTTPError as e:
             print(f"HTTP Error: {e.code} {e.reason}")
             # Handle the HTTP error as needed
+
+if __name__ == "__main__"
+main()
