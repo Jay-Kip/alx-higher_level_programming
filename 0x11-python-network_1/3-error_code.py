@@ -10,14 +10,14 @@ def main():
     '''Handles HTTP Errors'''
     url = sys.argv[1]
 
-    with urllib.request.urlopen(url) as resp:
-        try:
+    try:
+        with urllib.request.urlopen(url) as resp:
             html =resp.read()
             print(html)
 
     except urllib.error.HTTPError as e:
-            print(f"HTTP Error: {e.code} {e.reason}")
-            # Handle the HTTP error as needed
+        print(f"HTTP Error: {e.code} {e.reason}")
+        # Handle the HTTP error as needed
 
 if __name__ == "__main__":
     main()
