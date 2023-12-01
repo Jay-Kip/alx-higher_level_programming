@@ -19,5 +19,5 @@ def main():
             print(f"HTTP Error: {e.code} {e.reason}")
             # Handle the HTTP error as needed
 
-if __name__ == "__main__"
-main()
+if __name__ == "__main__":
+    main()
