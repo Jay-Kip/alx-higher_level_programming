@@ -1,29 +1,24 @@
 #!/usr/bin/python3
-'''sends a POST request to the passed URL
-with the email as a parameter, and displays
-the body of the response (decoded in utf-8)
-'''
+'''Post request'''
 import sys
 import urllib.request
 import urllib.parse
 
 
 def main():
+    '''Sends a post request rith param=email'''
     url = sys.argv[1]
     email = sys.argv[2]
 
-    # Prepare data to be sent in the post request
-    data = urllib.parse.urlencode({email: email}).encode()
+    param = {'email': email}
+    data = urllib.parse.urlencode(param)
+    data = data.encode('UTF8')
 
-    # Send the posy request
-    req = urllib.request.Request(url, data=data, method='PUT')
+    req = urllib.request.Request(url, data)
 
     with urllib.request.urlopen(url) as resp:
-        # Process the response
-        response_data = response.read().decode()
-
-        # print response data
-        print(response_data)
+        feedback = resp.read()
+        print(feedback.decode('UTF8'))
 
 if __name__ == "__main__":
     main()
