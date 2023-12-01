@@ -5,6 +5,7 @@
 def find_peak(list_of_integers):
     '''Returns largest number in an array'''
     try:
-        return max(list_of_integers)
-    except ValueError:
+        list_of_integers.sort()
+        return list_of_integers[-1]
+    except IndexError:
         return 'None'
