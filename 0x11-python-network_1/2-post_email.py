@@ -16,7 +16,7 @@ def main():
 
     req = urllib.request.Request(url, data)
 
-    with urllib.request.urlopen(url) as resp:
+    with urllib.request.urlopen(req) as resp:
         feedback = resp.read()
         print(feedback.decode('UTF8'))
 
