@@ -16,7 +16,7 @@ def main():
     data = urllib.parse.urlencode({email: email}).encode()
 
     # Send the posy request
-    req = urllib.request.Request(url, data=data, method='POST')
+    req = urllib.request.Request(url, data=data, method='PUT')
 
     with urllib.request.urlopen(url) as resp:
         # Process the response
