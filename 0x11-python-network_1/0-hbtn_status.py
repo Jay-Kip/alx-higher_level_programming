@@ -5,6 +5,6 @@ import urllib.request
 with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as resp:
     html = resp.read()
     print("Body response :")
-    print(f"\t-\ttype : {type(html)}")
-    print(f"\t-\tcontent : {html}")
-    print(f"\t-\tutf8 content : {html.decode()}")
+    print(f"\t- type : {type(html)}")
+    print(f"\t- content : {html}")
+    print(f"\t- utf8 content : {html.decode()}")
