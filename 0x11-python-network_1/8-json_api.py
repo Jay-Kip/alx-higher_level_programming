@@ -7,7 +7,7 @@ import requests
 
 def main():
     url = "http://0.0.0.0:5000/search_user"
-    arg = sys.argv[1]
+    # arg = sys.argv[1]
 
     if len(sys.arg) > 1:
         letter = sys.atgv[1]
