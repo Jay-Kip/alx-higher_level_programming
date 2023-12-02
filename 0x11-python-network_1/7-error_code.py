@@ -13,7 +13,7 @@ def main():
         print(f"Error code: {response.status_code}")
 
     else:
-        print(response)
+        print(response.text)
 
 
 if __name__ == "__main__":
