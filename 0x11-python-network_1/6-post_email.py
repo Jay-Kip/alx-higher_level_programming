@@ -14,7 +14,7 @@ def main():
     param = {'email': email}
 
     # Send post request with params
-    response = requests.post(url, data=data)
+    response = requests.post(url, data=param)
 
     if response.status_code == 200:
         content = response.text
