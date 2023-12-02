@@ -12,11 +12,10 @@ def main():
     response = requests.get('https://api.github.com/user',
                             auth=HTTPBasicAuth(username, passwd))
 
-    try:
+    if response.status_code == 200:
         profile = response.json()
         print(profile['id'])
-
-    except:
+    else:
         print("None")
 
 
