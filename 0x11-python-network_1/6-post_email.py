@@ -10,12 +10,14 @@ def main():
     url = sys.argv[1]
     email = sys.argv[2]
 
-    data = {'email': email}
+    # Create a dictionary of paramaters
+    param = {'email': email}
 
+    # Send post request with params
     response = requests.post(url, data=data)
 
     if response.status_code == 200:
-        content = response.txt
+        content = response.text
         print(content)
 
     else:
