@@ -28,5 +28,5 @@ def main():
         else:
             print("No result")
 
-        except ValueError:
+    except ValueError:
             print("Not a valid JSON")
