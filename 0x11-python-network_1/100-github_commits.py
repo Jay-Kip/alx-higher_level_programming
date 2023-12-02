@@ -1,32 +1,30 @@
 #!/usr/bin/python3
-'''Lists 10 commits from the repo'''
+'''Displais last 10 commits'''
 import sys
 import requests
-from requests.auth import HTTPBasicAuth
+
 
 def main():
 
-    def comm(i, commits):
-        '''Prints commits'''
-        sha = commits[i].get('sha')
-        commit = commits[i].get('commit')
-        author = author.get('author')
-        name = author.get('name')
-        print('{}: {}'.format(sha, name))
+    def print_commit(commit):
+        '''Prints commit details'''
+        sha = commit.get('sha')
+        author = commit.get('commit').get('author').get('name')
+        print(f'{sha}: {author}')
 
     repo = sys.argv[1]
     owner = sys.argv[2]
 
     headers = {"Accept": "application/vnd.github.v3+json"}
-    response = requests.get('https://api.github.com/repos' + owner + '/'
-                            + repo + '/commits', headers=headers)
+    url = f"https://api.github.com/repos/{owner}/{repo}/commits"
+    response = requests.get(url, headers=headers)
 
-    commits = response.json()
-    size = len(commits)
-
-    if size < 10:
-        for i in range(0, size):
-            print(commits)
+    if response.status_code == 200:
+        commits = response.json()
+        for commit in commits:
+            print_commit(commit)
+    else:
+        print("Failed to retrieve commits.")
 
 
 if __name__ == "__main__":
