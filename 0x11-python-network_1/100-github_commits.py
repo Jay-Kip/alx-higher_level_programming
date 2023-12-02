@@ -17,6 +17,7 @@ def main():
     repo = sys.argv[1]
     owner = sys.argv[2]
 
+    headers = {"Accept": "application/vnd.github.v3+json"}
     response = requests.get('https://api.github.com/repos' + owner + '/'
                             + repo + '/commits', headers=headers)
 
