@@ -9,11 +9,10 @@ def main():
     url = "http://0.0.0.0:5000/search_user"
     arg = sys.argv[1]
 
-    if len(arg) > 1:
-        letter = arg[1]
-
-    else:
+    if len(arg) < 2:
         letter = ""
+    else:
+        letter = args
 
     param = {"q": letter}
 
