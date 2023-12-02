@@ -28,7 +28,7 @@ def main():
             print("No result")
 
     except ValueError:
-            print("Not a valid JSON")
+        print("Not a valid JSON")
 
 
 if __name__ == "__main__":
