@@ -12,13 +12,12 @@ def main():
     response = requests.get('https://api.github.com/user',
                             auth=HTTPBasicAuth(username, passwd))
 
-    if response.status_code == 200:
-        try:
-            profile = response.json()
-            print(profile['id'])
+    try:
+        profile = response.json()
+        print(profile['id'])
 
-        except ValueError:
-            print("None")
+    except ValueError:
+        print("None")
 
 
 if __name__ == "__main__":
