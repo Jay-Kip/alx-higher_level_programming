@@ -6,6 +6,7 @@ a parameter, and finally displays the body of the respons
 import sys
 import requests
 
+
 def main():
     url = sys.argv[1]
     email = sys.argv[2]
