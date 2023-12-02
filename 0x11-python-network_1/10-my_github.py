@@ -16,7 +16,7 @@ def main():
         profile = response.json()
         print(profile['id'])
 
-    except ValueError:
+    except:
         print("None")
 
 
